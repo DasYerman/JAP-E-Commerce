@@ -188,3 +188,51 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+
+/*Login code*/
+.img-login{
+  width: 270px;
+  height: 150px;
+  align-self: center;
+}
+
+.container-login{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 200px 40px;
+  flex-direction: column;
+}
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+.login-h2{
+  text-align: center;
+  box-sizing: border-box;
+}
+.label-login{
+  align-self: center;
+  margin-top: px;
+}
+
+.login-input{
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+    
+}
+
+#login-button{
+  width: 110px;
+  height: 50px;
+  color: white;
+  background-color: #0173b1;
+  border-radius: 7px;
+  border: solid 1.5px #53C0FB;
+  align-self: center;
+  margin-top: 8px;
+  
+}
