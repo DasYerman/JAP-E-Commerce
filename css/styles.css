@@ -200,7 +200,8 @@ a.custom-card:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 200px 40px;
+  margin: auto;
+  width: 50%;
   flex-direction: column;
 }
 
@@ -209,10 +210,12 @@ a.custom-card:hover {
   flex-direction: column;
   width: 300px;
 }
+
 .login-h2{
   text-align: center;
   box-sizing: border-box;
 }
+
 .label-login{
   align-self: center;
   margin-top: px;
