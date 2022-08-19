@@ -190,9 +190,14 @@ a.custom-card:hover {
 }
 
 /*Login code*/
+.login-body{
+  background-image:url(/img/wallpaper-login-jap.png);
+  background-size: cover;
+}
+
 .img-login{
-  width: 270px;
-  height: 150px;
+  width: 60%;
+  height: auto;
   align-self: center;
 }
 
@@ -203,12 +208,15 @@ a.custom-card:hover {
   margin: auto;
   width: 50%;
   flex-direction: column;
+  border: 1px solid teal;
+  box-shadow: 5px 5px rgb(109, 133, 133);
 }
 
 .login-form{
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 50%;
+  margin: 20px;
 }
 
 .login-h2{
@@ -235,8 +243,8 @@ a.custom-card:hover {
 }
 
 #login-submit{
-  width: 110px;
-  height: 50px;
+  width: 15vw;
+  height: 7vh;
   color: white;
   background-color: #0173b1;
   border-radius: 7px;
