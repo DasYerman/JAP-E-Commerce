@@ -191,7 +191,7 @@ a.custom-card:hover {
 
 /*Login code*/
 .login-body{
-  background-image:url(/img/wallpaper-login-jap.png);
+  background-image:url(../img/wallpaper-login-jap.png);
   background-size: cover;
 }
 
