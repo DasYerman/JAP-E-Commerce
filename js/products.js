@@ -1,4 +1,4 @@
-
+//my code
 const AUTO_URL = "https://japceibal.github.io/emercado-api/cats_products/101.json"
 document.addEventListener("DOMContentLoaded", function(e){
     fetch(AUTO_URL)
@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function(e){
 
         addContent.innerHTML += `
 
-        
         <div onclick="setCatID(${data.products[i].id})" class="list-group-item list-group-item-action cursor-active">
         <div class="row">
             <div class="col-3">

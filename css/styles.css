@@ -228,7 +228,13 @@ a.custom-card:hover {
     
 }
 
-#login-button{
+.err-message-text{
+  color: red;
+  text-align: center;
+  display: none;
+}
+
+#login-submit{
   width: 110px;
   height: 50px;
   color: white;

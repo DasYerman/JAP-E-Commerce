@@ -21,17 +21,22 @@
     <!--My code for login-->
 
     <div class="container-login">
+
       <img class="img-login" src="img/login.png">
-      <form action="" class="login-form" method="post">
+
+      <form action="" class="login-form" method="post" id="login-form">
         <h2 class="login-h2">Inicio de sesión</h2>
 
-        <label for="email" class="label-login">Email</label>
-        <input type="text" name="email" class="login-input" required>
+        <label for="user" class="label-login">Email</label>
+        <input type="text" name="user" class="login-input" id="username">
 
         <label for="password" class="label-login">Contraseña</label>
-        <input type="password" name="password" class="login-input" required>
+        <input type="password" name="password" class="login-input" id="password">
+        <div id = "err-message">
+          <p class="err-message-text" id="p-error-text">Por favor completa los campos de inicio</p>
+        </div>
         
-        <input type="submit" name="ingresar" value="Iniciar sesión" id="login-button">
+        <input type="submit" value="Iniciar Sesión" id="login-submit">
       </form>
       </div>
       <!--End of my login code-->

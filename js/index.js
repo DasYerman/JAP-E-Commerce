@@ -1,4 +1,22 @@
+function logOut(){
+    localStorage.removeItem("user")
+    localStorage.removeItem("pass")
+} 
+
 document.addEventListener("DOMContentLoaded", function(){
+
+    let user = localStorage.getItem("user");
+    let password = localStorage.getItem("pass");
+
+    if(user == null | password == null){
+        alert("No hay datos de sesión ingresados");
+        location.href = "login.html"
+    }else
+
+    document.getElementById("log-out").addEventListener("click",function(){
+        logOut();
+    })
+    
     document.getElementById("autos").addEventListener("click", function() {
         localStorage.setItem("catID", 101);
         window.location = "products.html"
