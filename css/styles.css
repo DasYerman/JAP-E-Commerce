@@ -200,18 +200,17 @@ a.custom-card:hover {
   height: auto;
   align-self: center;
 }
-
+/*div*/
 .container-login{
   display: flex;
   align-items: center;
-  justify-content: center;
   margin: auto;
   width: 50%;
   flex-direction: column;
   border: 1px solid teal;
   box-shadow: 5px 5px rgb(109, 133, 133);
 }
-
+/*form*/
 .login-form{
   display: flex;
   flex-direction: column;
@@ -223,19 +222,17 @@ a.custom-card:hover {
   text-align: center;
   box-sizing: border-box;
 }
-
+/*labels*/
 .label-login{
   align-self: center;
-  margin-top: px;
 }
 
 .login-input{
   display: block;
   width: 100%;
-  margin-bottom: 15px;
-    
+  margin-bottom: 15px;   
 }
-
+/*error p*/
 .err-message-text{
   color: red;
   text-align: center;
@@ -251,7 +248,7 @@ a.custom-card:hover {
   border: solid 1.5px #53C0FB;
   align-self: center;
   margin-top: 8px;
-  
 }
 /*end login code*/
+
 

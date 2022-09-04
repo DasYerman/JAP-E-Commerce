@@ -1,3 +1,4 @@
+//my code
 function logOut(){
     localStorage.removeItem("user")
     localStorage.removeItem("pass")
@@ -11,12 +12,15 @@ document.addEventListener("DOMContentLoaded", function(){
     if(user == null | password == null){
         alert("No hay datos de sesión ingresados");
         location.href = "login.html"
-    }else
+    };
+
+    let email = document.getElementById("user-email")
+    email.innerText=user;
 
     document.getElementById("log-out").addEventListener("click",function(){
         logOut();
     })
-    
+//end of my code
     document.getElementById("autos").addEventListener("click", function() {
         localStorage.setItem("catID", 101);
         window.location = "products.html"
