@@ -8,7 +8,7 @@ let inputMin = document.getElementById("priceFilterMin");
 let inputMax = document.getElementById("priceFilterMax");
 let filterButton = document.getElementById("priceFilterButton");
 let restoreButton = document.getElementById("clearPriceFilter");
-let navBar = document.getElementById("search-bar")
+let navBar = document.getElementById("searchBar")
 let prodArray = [];
 let prodArray2 = [];
 
@@ -16,13 +16,18 @@ let user = localStorage.getItem("user");
 let email = document.getElementById("user-email")
     email.innerText=user;
 
+function setProdID(id) {
+    localStorage.setItem("prodID", id);
+    window.location = "product-info.html"
+}
+
 function showProd(){    
     let addContent = ""
     for(let i = 0; i < prodArray.length; i++){ 
         let products = prodArray[i];
 
         addContent += `
-        <div onclick="setCatID(${products.id})" class="list-group-item list-group-item-action cursor-active">
+        <div onclick="setProdID(${products.id})" class="list-group-item list-group-item-action cursor-active">
             <div class="row">
                 <div class="col-3">
                     <img src="${products.image}" alt="${products.description}" class="img-thumbnail">
@@ -50,6 +55,7 @@ getJSONData(PROD_URL).then(function(resultObj){
     }
 });
 
+//orden ascendente
 priceAsc.addEventListener("click", function(){
     prodArray.sort((a,b) =>{
         if(a.cost > b.cost){return -1;}
@@ -59,6 +65,7 @@ priceAsc.addEventListener("click", function(){
     showProd();
 })
 
+//orden descendente
 priceDesc.addEventListener("click", function(){
     prodArray.sort((a,b) =>{
         if(a.cost < b.cost){return -1;}
@@ -68,6 +75,7 @@ priceDesc.addEventListener("click", function(){
     showProd();
 })
 
+//orden relativo
 priceRel.addEventListener("click", function(){
     prodArray.sort((a,b) =>{
         if(a.soldCount > b.soldCount){return -1;}
@@ -77,6 +85,7 @@ priceRel.addEventListener("click", function(){
     showProd();
 })
 
+//filtro
 filterButton.addEventListener("click", function(){
     let min;
     if(inputMin.value !=="" && inputMin.value !==undefined){
@@ -101,14 +110,11 @@ restoreButton.addEventListener("click", function(){
     showProd();
 });
 
-/*navBar.addEventListener("keydown", function(){
-    let busqueda = document.getElementById("search-bar").value
-    prodArray = prodArray2.filter(prodArray2.contains(busqueda));
+navBar.addEventListener("keyup", function(e){
+    let filtValue = e.target.value 
+    let filteredProds =  prodArray2.filter( product => {
+        return product.name.includes(filtValue) || product.description.includes(filtValue)       
+    })
+    prodArray = filteredProds
     showProd()
-    this.contains
-
-})*/
-
-
-
-        
+})

@@ -6,7 +6,7 @@ let password = document.getElementById("password")
 
 login.addEventListener('submit', function(event){   
 
-    if(username.value == "" | password.value == ""){
+    if(username.value == "" || password.value == ""){
         event.preventDefault();
         let user = document.getElementById("username");
         user.style.border = "1px red solid";

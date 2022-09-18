@@ -10,6 +10,7 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -33,16 +34,33 @@
           <li class="nav-item">
             <a class="nav-link" href="login.html" id="log-out">Cerrar sesión</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" id="user-email"></a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
   <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
+    <!--my code-->
+    <div class="container" id="div-container"></div>
+    <div class="comment-contaier" id="com-container"></div>
+    <div class="comment-box-container" id="com-box">
+      <form action="" class="review-form" id="comment-form">
+        <label for="comment-box">Comparte tu opinión</label>
+        <textarea name="comment-box" id="user-comment" cols="30" rows="10" placeholder="Escribe tu comentario aquí"></textarea>
+        <label for="score-list">Califica el producto</label>
+        <select id="score-list" name="score">
+          <option value="5">5</option>
+          <option value="4">4</option>
+          <option value="3">3</option>
+          <option value="2">2</option>
+          <option value="1">1</option>
+        </select>
+        <input type="submit" id="com-submit">
+      </form>
     </div>
+    <!--end of my code-->
   </main>
   <footer class="text-muted">
     <div class="container">
