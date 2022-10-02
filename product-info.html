@@ -14,7 +14,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1" id="total-nav">
     <div class="container">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,22 +30,24 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html" id="log-out">Cerrar sesión</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" id="user-email"></a>
-          </li>
+          </li>          
+          <!--my code-->
+          <div class="dropdown">
+            <a class="nav-link dropdown-button" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="user-email"></a>      
+            <ul class="dropdown-menu">              
+              <li><a class="dropdown-item" href="my-profile.html">Mi cuenta</a></li>
+              <li><a class="dropdown-item" href="cart.html">Carrito</a></li>
+              <li><a class="dropdown-item" href="login.html" id="log-out">Cerrar sesión</a></li>
+            </ul>            
+          </div>                   
         </ul>
       </div>
     </div>
   </nav>
   <main>
-    <!--my code-->
-    <div class="container" id="div-container"></div>
-    <div class="comment-contaier" id="com-container"></div>
-    <div class="comment-box-container" id="com-box">
+    <div class="container" id="div-container"></div><!--product info-->
+    <div class="comment-contaier" id="com-container"></div><!-- comments container-->
+    <div class="comment-box-container" id="com-box"><!-- add comment container-->
       <form action="" class="review-form" id="comment-form">
         <label for="comment-box">Comparte tu opinión</label>
         <textarea name="comment-box" id="user-comment" cols="30" rows="10" placeholder="Escribe tu comentario aquí"></textarea>
@@ -59,6 +61,11 @@
         </select>
         <input type="submit" id="com-submit">
       </form>
+    </div>
+    <div class="rel-prod-p-container">
+      <p class="prod-rel-p"><b>Productos relacionados:</b></p>
+    </div>
+    <div class="prod-related" id="prod-related">      
     </div>
     <!--end of my code-->
   </main>

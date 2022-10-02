@@ -2,6 +2,7 @@ let PROD_INFO_URL = 'https://japceibal.github.io/emercado-api/products/'+ localS
 let COMMENT_URL = 'https://japceibal.github.io/emercado-api/products_comments/'+ localStorage.getItem("prodID") +'.json'
 let container = document.getElementById("div-container")
 let comContainer = document.getElementById("com-container")
+let relProdContainer = document.getElementById("prod-related")
 let arraySingleProd = []
 let commentArray = []
 let newComment = {}
@@ -11,6 +12,12 @@ let submitForm = document.getElementById("comment-form")
 let user = localStorage.getItem("user");
 let email = document.getElementById("user-email")
     email.innerText=user;
+
+
+function setProdID(id) {
+    localStorage.setItem("prodID", id);
+    window.location = "product-info.html"
+}    
 
 function showSingleProd(){
     let addContent = "";
@@ -60,19 +67,37 @@ function showComments(){
     }
 }
 
+function relatedProd(){
+    let addProds =""
+        for(let i = 0; i < arraySingleProd.relatedProducts.length; i++){
+        let prod = arraySingleProd.relatedProducts[i]
+        addProds +=`
+         <div onclick="setProdID(${prod.id})" class="rel-img-container">
+            <img src="${prod.image}" class ="rel-prod-img">
+            <p><b>${prod.name}</b></p>            
+         </div>
+        `
+    } relProdContainer.innerHTML += addProds    
+}
+
 getJSONData(PROD_INFO_URL).then(function(resultObj){
-    if(resultObj.status==="ok"){
-        console.log(resultObj.data)
+    if(resultObj.status==="ok"){        
         arraySingleProd = resultObj.data
          showSingleProd()
     }
 });
 
 getJSONData(COMMENT_URL).then(function(resultObj){
-    if(resultObj.status==="ok"){
-        console.log(resultObj.data)
+    if(resultObj.status==="ok"){        
         commentArray = resultObj.data
         showComments()
+    }
+});
+
+getJSONData(PROD_INFO_URL).then(function(resultObj){
+    if(resultObj.status==="ok"){        
+        arraySingleProd = resultObj.data
+        relatedProd()
     }
 });
 
@@ -83,9 +108,7 @@ let mm = today.getMonth()
 let yyyy = today.getFullYear();    
 let now = timeNow.getHours() + ":"+timeNow.getMinutes()+ ":" + timeNow.getSeconds();
 today = dd + '-' + mm + '-' + yyyy + " ";
-
 let localTime = today + now
-console.log(localTime)
 
 submitForm.addEventListener("submit", function(e){
     if(userComment.value === ""){

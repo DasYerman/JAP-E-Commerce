@@ -29,9 +29,15 @@
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html" id="log-out">Cerrar sesión</a>
-          </li>
+          <div class="dropdown">
+            <a class="nav-link dropdown-button" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="user-email"></a>
+            </a>          
+            <ul class="dropdown-menu">              
+              <li><a class="dropdown-item" href="my-profile.html">Mi cuenta</a></li>
+              <li><a class="dropdown-item" href="cart.html">Carrito</a></li>
+              <li><a class="dropdown-item" href="login.html" id="log-out">Cerrar sesión</a></li>
+            </ul>
+          </div> 
         </ul>
       </div>
     </div>

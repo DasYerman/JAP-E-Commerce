@@ -313,6 +313,7 @@ a.custom-card:hover {
   width: 84%;
   margin-left: 8%;
   margin-right: 40%;
+
 }
 
 .review-form{
@@ -342,4 +343,42 @@ a.custom-card:hover {
 #score-list{
   display: flex;
   width: 5%;
+}
+/*related prods code*/
+.rel-prod-p-container{
+  margin-left: 8%;
+}
+
+.prod-related{
+  display: flex;
+  flex-direction: row;  
+  width: 35vw;
+  height: auto;
+  justify-content: space-between;
+  margin-left: 8%;  
+}
+
+.rel-img-container{
+  display: flex;
+  flex-direction: column;
+  width: 48%;
+  height: auto;
+  border: 1px solid rgb(146, 146, 146);
+  border-radius: 6px;  
+  cursor: pointer;
+}
+
+.rel-prod-img{
+  width: 100%;
+  height: auto;
+
+}
+/*dropdown button*/
+
+.dropdown-menu{
+  background-color: rgb(44, 44, 44);
+}
+
+.dropdown-item{
+  color: white;
 }
