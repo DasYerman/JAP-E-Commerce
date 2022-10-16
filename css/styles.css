@@ -272,8 +272,24 @@ a.custom-card:hover {
 /*seachbar and filters end*/
 
 /*product info code*/
-.prod-container{
+.purchase-button{
+  text-align: center;  
+  display: flex; 
+  margin: 1%;
+  margin-left: 65%;
+  background-color: rgb(18, 134, 76); 
+  color: #fff;
+  border: 1px solid rgb(238, 238, 238);
+  border-radius: 8px;
+  width: 8%;
+  
+}
+
+.prod-h2-container{
+  display: flex;
   margin-top: 4%;
+  margin-bottom: 2%;
+  width: 100%;
 }
 
 .prod-image-container{
@@ -374,11 +390,89 @@ a.custom-card:hover {
 
 }
 /*dropdown button*/
-
 .dropdown-menu{
   background-color: rgb(44, 44, 44);
 }
 
 .dropdown-item{
   color: white;
+}
+/*cart*/
+
+.cart-title{
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+}
+
+#table-container-main{
+  display: flex;
+  flex-direction: column;
+}
+
+/*cart-table*/
+
+.table-container{  
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  flex-direction: column;
+  width: 60%;
+  align-self: center;
+}
+.table-number{
+  width: 5vw;
+}
+.cart-table{
+  margin-top: 2%;
+}
+
+.table-head{
+  border-bottom: solid black 1px;
+}
+
+.table-img{
+  width: 80px;
+}
+
+.td{
+  padding: 1%;
+}
+
+/*cart-form-radio*/
+
+.form-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 4%;
+  width: 60%;
+  align-self: center;
+}
+
+.form-cart{
+  display: flex;
+  flex-direction: column;
+}
+
+.radios{
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-and-lable{
+  margin: 0.5%;
+}
+
+/*address*/
+.address-h4{
+  margin-top: 4%;
+}
+
+.input-form-street{
+  width: 100%;
+}
+
+.address-p{
+  margin-bottom: 0;
 }

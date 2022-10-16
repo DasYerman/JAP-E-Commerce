@@ -19,16 +19,24 @@ function setProdID(id) {
     window.location = "product-info.html"
 }    
 
+function cartProd(){
+    let item = arraySingleProd
+    jsonItem = JSON.stringify(item)
+    localStorage.setItem("cartProd", arraySingleProd)
+    window.location ="cart.html"
+}
+
 function showSingleProd(){
+    console.log(arraySingleProd)
     let addContent = "";
     let elements = arraySingleProd
     addContent +=`
     <div class="prod-container" >
         <div class="prod-h2-container">
-            <h2>${elements.name}</h2>
+            <h2>${elements.name}</h2><button class="purchase-button" id="purchase-button" onclick="cartProd()">Comprar</button>
         </div>
         <div class="info-container">
-            <p><b>Descripción del producto:</b> ${elements.description}</p>
+            <p><b>Descripción del producto:</b>${elements.description}</p>
             <p><b>Precio: </b>${elements.currency} ${elements.cost}$</p>
             <p><b>Total vendidos: </b>${elements.soldCount}</p>
             <p><b>Imagenes del producto</b></p>

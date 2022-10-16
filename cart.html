@@ -30,22 +30,61 @@
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
           <div class="dropdown">
-            <a class="nav-link dropdown-button" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="user-email"></a>
-            </a>          
-            <ul class="dropdown-menu">              
+            <a class="nav-link dropdown-button" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+              id="user-email"></a>
+            </a>
+            <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="my-profile.html">Mi cuenta</a></li>
               <li><a class="dropdown-item" href="cart.html">Carrito</a></li>
               <li><a class="dropdown-item" href="login.html" id="log-out">Cerrar sesión</a></li>
             </ul>
-          </div> 
+          </div>
         </ul>
       </div>
     </div>
   </nav>
   <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+    <div class="container" id="table-container-main">
+      <h2 class="cart-title">Carrito de compras</h2>
+      <div class="table-container">
+        <h5 class="table-top-text">Artículos en el carrito</h5>
+        <table class="cart-table" id="cart-table" cellspacing="pixels">
+          <tr class="table-head">
+            <th></th>
+            <th>Nombre</th>
+            <th>Costo</th>
+            <th>Cantidad</th>
+            <th>Subtotal</th>
+          </tr>
+        </table>
+      </div>
+      <div class="form-container">
+        <form class="form-cart">
+          <h4 class="radio-h4">Seleccionar método de envio</h4>
+          <label class="radio-and-lable" for="opcion-de-envio1"><input type="radio" name="rad" id="opcion-de-envio1">
+            Premium de 2 a 5 días</label>
+          <label class="radio-and-lable" for="opcion-de-envio2"><input type="radio" name="rad" id="opcion-de-envio2">
+            Express de 5 a 8 días</label>
+          <label class="radio-and-lable" for="opcion-de-envio3"><input type="radio" name="rad" id="opcion-de-envio3">
+            Standard de 12 a 15 días</label>
+          <h4 class="address-h4">Dirección de envio</h4>
+          <div class="container">
+            <div class="row">
+              <div class="col-6">
+                <p class="address-p">Calle</p>
+                <input class="input-form-street" type="text">
+              </div>
+              <div class="col-6">
+                <p class="address-p">Número</p>
+                <input type="text">
+              </div>
+              <div class="col-6">
+                <p class="address-p">Esquina</p>
+                <input type="text" class="input-form-street">
+              </div>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   </main>
