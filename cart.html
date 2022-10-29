@@ -29,6 +29,7 @@
           <li class="nav-item">
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
+          <!-- my code-->
           <div class="dropdown">
             <a class="nav-link dropdown-button" role="button" data-bs-toggle="dropdown" aria-expanded="false"
               id="user-email"></a>
@@ -44,48 +45,159 @@
     </div>
   </nav>
   <main>
-    <div class="container" id="table-container-main">
-      <h2 class="cart-title">Carrito de compras</h2>
-      <div class="table-container">
-        <h5 class="table-top-text">Artículos en el carrito</h5>
-        <table class="cart-table" id="cart-table" cellspacing="pixels">
-          <tr class="table-head">
-            <th></th>
-            <th>Nombre</th>
-            <th>Costo</th>
-            <th>Cantidad</th>
-            <th>Subtotal</th>
-          </tr>
-        </table>
+    <form action="#" method="get" class="needs-validation" novalidate>
+      <div class="container" id="table-container-main">
+        <h2 class="cart-title">Carrito de compras</h2>
+        <div class="table-container">
+          <h5 class="table-top-text">Artículos en el carrito</h5>
+          <table class="cart-table" id="cart-table" cellspacing="pixels">
+            <tr class="table-head">
+              <th></th>
+              <th>Nombre</th>
+              <th>Costo</th>
+              <th>Cantidad</th>
+              <th>Subtotal</th>
+            </tr>
+          </table>
+          <p id="input-error-number">Por favor ingresa al menos un artículo</p>          
+        </div>        
       </div>
-      <div class="form-container">
-        <form class="form-cart">
-          <h4 class="radio-h4">Seleccionar método de envio</h4>
-          <label class="radio-and-lable" for="opcion-de-envio1"><input type="radio" name="rad" id="opcion-de-envio1">
-            Premium de 2 a 5 días</label>
-          <label class="radio-and-lable" for="opcion-de-envio2"><input type="radio" name="rad" id="opcion-de-envio2">
-            Express de 5 a 8 días</label>
-          <label class="radio-and-lable" for="opcion-de-envio3"><input type="radio" name="rad" id="opcion-de-envio3">
-            Standard de 12 a 15 días</label>
-          <h4 class="address-h4">Dirección de envio</h4>
-          <div class="container">
-            <div class="row">
-              <div class="col-6">
-                <p class="address-p">Calle</p>
-                <input class="input-form-street" type="text">
-              </div>
-              <div class="col-6">
-                <p class="address-p">Número</p>
-                <input type="text">
-              </div>
-              <div class="col-6">
-                <p class="address-p">Esquina</p>
-                <input type="text" class="input-form-street">
-              </div>
+    </form>
+    <div class="form-container">
+      <form action="#" method="get" class="form-cart needs-validation" id="form-purchase" novalidate>
+      <div class="radios-shipment">
+        <h4 class="radio-h4">Seleccionar método de envio</h4>
+        <label class="radio-and-lable " for="opcion-de-envio1"><input type="radio" name="rad" id="opcion-de-envio1"
+            required>
+          Premium de 2 a 5 días (15%)</label>
+        <label class="radio-and-lable " for="opcion-de-envio2"><input type="radio" name="rad" id="opcion-de-envio2">
+          Express de 5 a 8 días (7%)</label>
+        <label class="radio-and-lable " for="opcion-de-envio3"><input type="radio" name="rad" id="opcion-de-envio3">
+          Standard de 12 a 15 días (5%)<p class="invalid-feedback">Selecciona un método de envio</p><p class="valid-feedback">Método de envío seleccionado</p></label>        
+      </div>
+      <div class="container ">
+        <h4 class="direction-div">Dirección de envio</h4>
+        <div class="row">
+          <div class="col-8">
+            <label class="address-p" for="address-data-1">Calle</label>
+            <input class="input-form-street form-control" type="text" id="address-data-1" required>
+            <p class="invalid-feedback">Coloca una calle</p>
+            <p class="valid-feedback">Calle colocada</p>
+          </div>
+          <div class="col-4">
+            <label class="address-p" for="address-data-2">Número</label>
+            <input class="input-form-number form-control" type="text" id="address-data-2" required>
+            <p class="invalid-feedback">Coloca un número de domicilio</p>
+            <p class="valid-feedback">Número colocado</p>
+          </div>
+          <div class="col-8">
+            <label class="address-p" for="address-data-3">Esquina</label>
+            <input type="text" class="input-form-street form-control" id="address-data-3" required>
+            <p class="invalid-feedback">Coloca una esquina</p>
+            <p class="valid-feedback">Esquina colocada</p>
+          </div>
+        </div>
+      </div>
+      <div class="container" id="total-cost-div">
+        <h4 calss="total-cost-h4">Costos</h4>
+        <div class="list-group-item">
+          <div class="cost-items-container">
+            <div class="text-div-costs">
+              <h4>Subtotal</h4>
+              <p>Costo unitario del producto por unidad</p>
+            </div>
+            <div class="total-div">
+              <h4 id="total-div">0</h4>
             </div>
           </div>
-        </form>
+        </div>
+        <div class="list-group-item">
+          <div class="cost-items-container">
+            <div class="text-div-costs">
+              <h4>Costo de envío</h4>
+              <p>Según el tipo de envío</p>
+            </div>
+            <div class="total-div">
+              <h4 id="deliver-total">0</h4>
+            </div>
+          </div>
+        </div>
+        <div class="list-group-item">
+          <div class="cost-items-container">
+            <div class="text-div-costs">
+              <h4>Total($)</h4>
+            </div>
+            <div class="total-div">
+              <h4 id="final-total">0</h4>
+            </div>
+          </div>
+        </div>
       </div>
+      <div class="cost-items-container">
+        <p id="terminos">Forma de pago no seleccionada</p>
+        <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="pay-method" >
+          Seleccionar
+        </a>
+        <p class="d-none" id="hide">Ingresa una forma de pago valida</p>
+      </div>
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Forma de pago</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <label for="payment-card"><input type="radio" id="payment-card" name="payment-type" required> Tarjeta de
+                crédito</label>
+              <fieldset id="card-fieldset" disabled>
+                <div class="container card-details">
+                  <div class="row">
+                    <div class="col-8 ">
+                      <label for="card-input" class="address-p ">Número de tarjeta</label>
+                      <input class="input-form-street form-control" type="text" id="card-input" required >
+                      <p class="invalid-feedback">Coloca un número de tarjeta valido</p>
+                      <p class="valid-feedback">Número de tarjeta valido</p>
+                    </div>
+                    <div class="col-4 ">
+                      <label for="code-input" class="address-p ">Código de seg.</label>
+                      <input class="input-form-number form-control" id="code-input" type="text" required>
+                      <p class="invalid-feedback">Coloca el código de seguridad</p>
+                      <p class="valid-feedback">Código de seguridad correcto</p>
+                    </div>
+                    <div class="col-8 ">
+                      <label for="date-input" class="address-p ">Vencimiento (MM/AA)</label>
+                      <input type="text" id="date-input" class="input-form-street form-control" required>
+                      <p class="invalid-feedback">Coloca la fecha de vencimiento</p>
+                      <p class="valid-feedback">Fecha de vencimiento valida</p>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+              <div class="bank-option">
+                <label for="payment-bank"><input type="radio" id="payment-bank" name="payment-type"> Transferencia
+                  bancaria</label required>
+              </div>
+              <fieldset id="bank-fieldset" disabled>
+                <div class="bank-option-div col-8">
+                  <label for="bank-input" class="address-p">Número de cuenta</label>
+                  <input type="text" id="bank-input" class="input-form-street form-control" required>
+                  <p class="invalid-feedback">Coloca la fecha de vencimiento</p>
+                </div>
+              </fieldset>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="close-button-modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="btn btn-primary" type="submit">Comprar</button>
+      <div class="alert alert-success" role="alert" id="alert">
+        <p>Has comprado con exito</p>        
+      </div>
+      </form>
+    </div>
     </div>
   </main>
   <footer class="text-muted">
@@ -112,3 +224,7 @@
 </body>
 
 </html>
+
+
+
+<!---->

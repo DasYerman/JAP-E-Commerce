@@ -417,7 +417,7 @@ a.custom-card:hover {
   justify-content: center;
   margin-top: 2%;
   flex-direction: column;
-  width: 60%;
+  width: 75%;
   align-self: center;
 }
 .table-number{
@@ -439,40 +439,89 @@ a.custom-card:hover {
   padding: 1%;
 }
 
-/*cart-form-radio*/
-
-.form-container{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: 4%;
-  width: 60%;
-  align-self: center;
+#input-error-number{
+  display: none;  
+  color: red;
 }
+/*purchase-form*/
 
 .form-cart{
+  width: 65%;
+  display: flex;
+  flex-direction: column;  
+  margin-left: 18%;
+}
+/*cart-form-radio*/
+
+
+.radios-shipment{
   display: flex;
   flex-direction: column;
-}
-
-.radios{
-  display: flex;
-  flex-direction: column;
-}
-
-.radio-and-lable{
-  margin: 0.5%;
+  margin-top: 3%;
 }
 
 /*address*/
-.address-h4{
-  margin-top: 4%;
+.direction-div{
+  margin-top: 3%;
 }
 
 .input-form-street{
   width: 100%;
 }
 
+.input-form-number{
+  width: 100%;
+}
+
 .address-p{
   margin-bottom: 0;
+}
+
+/*total cost div*/
+
+#total-cost-div{
+  margin-top: 4%;
+  padding: 0;
+}
+
+.cost-items-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.total-div{
+  display: flex;
+  margin-left: auto;
+}
+
+/*modal payment*/
+
+.card-details{
+  margin-top:3%;
+  border-top: solid 1px rgb(182, 181, 181);
+  padding: 2%;
+}
+
+.bank-option{
+  margin-top: 2%;
+  padding-bottom: 2%;
+  border-bottom: solid 1px rgb(182, 181, 181);
+}
+
+.bank-option-div{
+  margin-top: 3%;
+}
+
+.pay-method{
+  margin-left: 1%;
+  color: #228ac2;
+  text-decoration: underline;
+}
+
+.cost-items-container{
+  margin-top: 4%;
+}
+
+#alert{
+  display: none;
 }
