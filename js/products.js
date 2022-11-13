@@ -1,4 +1,4 @@
-//my code
+
 let PROD_URL = 'https://japceibal.github.io/emercado-api/cats_products/' + localStorage.getItem("catID") + '.json';
 
 const priceAsc = document.getElementById("sortAsc");
@@ -55,7 +55,7 @@ getJSONData(PROD_URL).then(function(resultObj){
     }
 });
 
-//orden ascendente
+
 priceAsc.addEventListener("click", function(){
     prodArray.sort((a,b) =>{
         if(a.cost > b.cost){return -1;}
@@ -65,7 +65,7 @@ priceAsc.addEventListener("click", function(){
     showProd();
 })
 
-//orden descendente
+
 priceDesc.addEventListener("click", function(){
     prodArray.sort((a,b) =>{
         if(a.cost < b.cost){return -1;}
@@ -75,7 +75,7 @@ priceDesc.addEventListener("click", function(){
     showProd();
 })
 
-//orden relativo
+
 priceRel.addEventListener("click", function(){
     prodArray.sort((a,b) =>{
         if(a.soldCount > b.soldCount){return -1;}
@@ -85,7 +85,7 @@ priceRel.addEventListener("click", function(){
     showProd();
 })
 
-//filtro
+
 filterButton.addEventListener("click", function(){
     let min;
     if(inputMin.value !=="" && inputMin.value !==undefined){
@@ -111,9 +111,9 @@ restoreButton.addEventListener("click", function(){
 });
 
 navBar.addEventListener("keyup", function(e){
-    let filtValue = e.target.value 
+    let filtValue = e.target.value.toLowerCase() 
     let filteredProds =  prodArray2.filter( product => {
-        return product.name.includes(filtValue) || product.description.includes(filtValue)       
+        return product.name.toLowerCase().includes(filtValue) || product.description.toLowerCase().includes(filtValue)       
     })
     prodArray = filteredProds
     showProd()

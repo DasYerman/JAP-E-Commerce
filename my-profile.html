@@ -45,23 +45,51 @@
             <a class="nav-link" href="sell.html">Vender</a>
           </li>
           <div class="dropdown">
-            <a class="nav-link dropdown-button" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="user-email"></a>
-            </a>          
-            <ul class="dropdown-menu">              
+            <a class="nav-link dropdown-button" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+              id="user-email"></a>
+            </a>
+            <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="my-profile.html">Mi cuenta</a></li>
               <li><a class="dropdown-item" href="cart.html">Carrito</a></li>
               <li><a class="dropdown-item" href="login.html" id="log-out">Cerrar sesión</a></li>
             </ul>
-          </div> 
+          </div>
         </ul>
       </div>
     </div>
   </nav>
   <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+    <form class="needs-validation" novalidate>
+      <div class="user-info-container container">
+        <h2 class="h2-user-title">Perfil</h2>
+        <div class="profile-pic-container">
+          <form action="" method='post'>
+            <img src="img/img_perfil.png" class="profile-pic" id="cover-preview" alt="">
+            <input type="file" id="cover">
+          </form>
+        </div>
+        <div class="row user-inputs">
+          <div class="col-6">
+            <label for="first-name" class="user-info-label">Primer nombre*</label>
+            <input type="text" class="form-control user-info-input" id="first-name" required>
+            <label for="first-surname" class="user-info-label">Primer apellido*</label>
+            <input type="text" class="form-control user-info-input" id="first-surname" required>
+            <label for="e-mail-user" class="user-info-label">E-mail*</label>
+            <input type="text" class="form-control user-info-input" id="e-mail-user" required>
+            <p class="invalid-feedback">Por favor completa los campor obligatorios</p>
+          </div>
+          <div class="col-6">
+            <label for="second-name" class="user-info-label">Segundo nombre</label>
+            <input type="text" class="form-control user-info-input" id="second-name">
+            <label for="second-surname" class="user-info-label">Segundo apellido</label>
+            <input type="text" class="form-control user-info-input" id="second-surname">
+            <label for="contact-phone" class="user-info-label">Télefono de contacto</label>
+            <input type="text" class="form-control user-info-input" id="contact-phone">
+          </div>
+        </div>
+        <input type="submit" class="btn btn-primary user-info-submit" id="user-info-submit" value="Guardar cambios">
       </div>
+    </form>
     </div>
   </main>
   <footer class="text-muted">

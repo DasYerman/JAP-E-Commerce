@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>eMercado - Todo lo que busques está aquí</title>
-  
+
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
@@ -18,29 +18,18 @@
 
 <body>
   <main class="mt-5 login-body">
-    <!--My code for login-->
-
     <div class="container-login">
-
       <img class="img-login" src="img/login.png">
-
-      <form action="" class="login-form" method="post" id="login-form">
+      <form class="login-form needs-validation" method="post" id="login-form" novalidate>
         <h2 class="login-h2">Inicio de sesión</h2>
-
         <label for="user" class="label-login">Email</label>
-        <input type="text" name="user" class="login-input" id="username">
-
+        <input type="text" name="user" class="form-control" id="username" required>
         <label for="password" class="label-login">Contraseña</label>
-        <input type="password" name="password" class="login-input" id="password">
-        
-        <div id = "err-message">
-          <p class="err-message-text" id="p-error-text">Por favor completa los datos de inicio</p>
-        </div>
-        
-        <input type="submit" value="Iniciar Sesión" id="login-submit">
+        <input type="password" name="password" class="form-control" id="password" required>
+        <p class="invalid-feedback">Por favor coloca datos de sesión validos</p>
+        <input type="submit" class="btn btn-primary" value="Iniciar Sesión" id="login-submit">
       </form>
-      </div>
-      <!--End of my login code-->
+    </div>
     </div>
   </main>
   <footer class="text-muted">

@@ -1,4 +1,4 @@
-//my code
+
 function logOut(){
     localStorage.removeItem("user")
     localStorage.removeItem("pass")
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function(){
     document.getElementById("log-out").addEventListener("click",function(){
         logOut();
     })
-//end of my code
+
     document.getElementById("autos").addEventListener("click", function() {
         localStorage.setItem("catID", 101);
         window.location = "products.html"
